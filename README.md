@@ -116,21 +116,6 @@ displaySchedule() had already did
 * Future development : Sort by deadline - we didn't have a chance to work on this feature, but we keep this as a future development plan.
 * Repository clean up - discard files that are no longer needed. 
  
- ## Screenshots
-1. Gets user input task and subtask.
-<img width="852" alt="IMG_5824" src="https://github.com/user-attachments/assets/c9f640c8-5d31-4308-b53e-309c0d652bd3" />
-
-2. Displays all the events including subtask
-<img width="852" alt="IMG_3745" src="https://github.com/user-attachments/assets/d1fe8304-ff86-41a5-a095-159417f02c7f" />
-
-3. Edit menu output
-<img width="852" alt="IMG_2064" src="https://github.com/user-attachments/assets/c3388ee5-5f9f-46c6-9fea-0a2f5a44f966" />
-
-5. Display completed events
-<img width="852" alt="IMG_9811" src="https://github.com/user-attachments/assets/616ab5e7-7959-48d6-8cc2-6668e785448f" />
-
-6. Remove a task so that it does not show up when all events are displayed
- <img width="852" alt="IMG_2212" src="https://github.com/user-attachments/assets/0e25b6f2-cb5d-4ca1-9d5e-dc5ae233d8ad" />
 
  ## Installation/Usage
 ### Requirement:

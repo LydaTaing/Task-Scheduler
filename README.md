@@ -37,79 +37,9 @@ The Task Scheduler application provides a structured flow for managing events an
 <img width="1045" alt="Screenshot 2025-02-27 at 2 41 08 AM" src="https://github.com/user-attachments/assets/0c8d16a6-fd24-4a4b-9f24-4e9969e4e27c" />
 
 
-### Screen Layouts
-<img width="771" alt="AD_4nXd3yY746di-W9LHkeTGwQUy514UbkJWhY2GCx1RH1O8RoGhUZintlI3sRf-Iws1649zHmfcOweQUFPd5lraz3D9h1j_NpERTWdXq2T1OdYcW-c2Xt2lGCcqIGhGLZ-XK5qkCLhfAQ" src="https://github.com/user-attachments/assets/2679e73f-8121-488c-aa28-b43ee020188e" />
-
-The main menu has two options: create new event, view current schedule or view completed task. Users can also end the program directly by entering 0. 
-
-<img width="771" alt="AD_4nXfMvfk03_GZPOxSOCHx6xax7g_Ot4UBsBcbNDTiZ8J1T9MBarAwNyLakMdklw-mBNm8uSVKxZMgDVFAV9CbgabhmqtrtlnWh51fM9lzgntG3oW-A--OyFbcP5-zvA_ZcI9fFkVI" src="https://github.com/user-attachments/assets/e12dbe04-f91a-4311-9425-db1a5f5495a3" />
-
-If the user selects 1, the program will ask the user for the new event title, time, priority and category. After creating the new event, the user can view the current schedule, create a new event or go to the main menu. 
-
-<img width="771" alt="IMG_6663" src="https://github.com/user-attachments/assets/b7ab4d27-9058-48d9-9ab7-760456cca647" />
-
-If the user selects 2, the program will arrange the current events by category or by priority. The user can select a specific event and edit it. The user can edit the event title, time, delete it or mark it as complete. 
-After the user selects a task, the program would ask how the user wants to edit the event. 
-
-<img width="771" alt="IMG_8861" src="https://github.com/user-attachments/assets/582264f6-1e17-4bbe-a55f-f630ee87a98c" />
-
-User can choose to link event or make adjustment on the event inoformation and option to return main menu. 
-
-<img width="771" alt="IMG_0379" src="https://github.com/user-attachments/assets/c4e6f579-0774-419b-8a42-88faafa57184" />
-
-If the user selects Link events, the user can link the current event to another event. After that, user can link another event or return to previous menu. 
-After any edit completed, the program will ask the user whether they want to create a new task or return to the main menu. 
-
-<img width="771" alt="image" src="https://github.com/user-attachments/assets/fe367bbf-b25d-4b0e-808a-8d3b1a733eb1" />
-
-If the user selects 3 from the main menu, the completed task would be displayed. User can choose display by time or by priority. After the completed tasks are displayed, user would return to the main menu. 
-
 ## Class Diagram
-Data class: This class is responsible for tracking the user’s task statistics related to their productivity levels. The getters and setters will store the user’s average time completion for each task, total task completed, and how many pending tasks they have left.
 
-Schedule class: This class is responsible for tracking how many tasks we can add or remove, the priority level, the name of the schedule, the display, and the duration it will take to complete and whether the schedule is active or inactive.
-
-Task class: This class is responsible for keeping track of the name of the task, priority level, what the task is for, the progress of the task, and whether it is a recurring task or not.
-
-Notification class: This class is responsible for the message the user will receive, the way it is displayed, if the user wants the notification to reappear, and the priority level.
-
-Display Menu class: This class is responsible for keeping track of the selected task number and the display.
-
-User class: This class stores the essential information regarding the name of the user and their ID number. 
-![UML](https://github.com/user-attachments/assets/10db852b-30b3-433b-9545-8b6d549bde6d)
-
-
-
-
- ## Class Diagram Updated 
- ![IMG_0618](https://github.com/user-attachments/assets/0397424f-23c2-4433-82a7-b57d20b470d4)
-
-
-Deleting notification class: We removed the notification class feature because we wanted to maintain a more 
-Clean and efficient codebase. Therefore, we wanted to simplify our feature. This change will streamline the
-code and ensure that future updates are easier to implement and maintain. 
-
-Deleting data class: We removed the data class because there is no need for these data features and 
-Functions. The idea of getting data from task is already similar to the schedule class. Therefore, removing
-This class will follow the single responsibility principle. 
-
-Deleting user class: SInce it is input, terminal-based there is no need for the user class. This is because all of
-The inputs and user’s schedules will start from the display menu. Therefore, this removal encourages code
-efficiency and simplicity.
-
-Moving functions: We moved the display_categorized() function that initially belonged to the Schedule class
-into the DisplayMenu class instead. This is because this function aligns better with the purpose of the 
-DisplayMenu class instead of the Schedule class. By moving this into DisplayMenu class we are following
-The Single Responsibility Rule where a class should have a single purpose only and not have many purposes.
-We deleted the display_full() class in the Schedule class because it was repetitive to what DiplayMenu class’
-displaySchedule() had already did
-
-## Class Diagram updated 
 ![UML diagram](https://github.com/user-attachments/assets/5e7e357d-4ae1-4f50-996f-df369a5c720f)
-
-* Deleted Category class and make it a part of Task in order to minimize classes in the project. 
-* Adding SubTask for additional feature for user to add sub task in each task. 
-* Reconstruct Schedule class into to separate classes : EventManager and EventSearch. Adds ability to search event through different variables, and marking events as complete / sort them. Each of the class create smaller scope of resposibilty and more manageable. 
 
 ## Current and Future Development 
 * Current/ incomplete development : Linked Task - still in progress. Linked tasks implementation is used so that when we open a task, another one closes. We created a class to handle linked feature, but we are not able to adjust the rest of the file and tested it. Therefore, we decided to keep it out of the program for time being. 
